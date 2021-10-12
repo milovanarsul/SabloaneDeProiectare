@@ -22,6 +22,7 @@
 		34FB21FD27159DE000EED6FE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB21FC27159DE000EED6FE /* Image.swift */; };
 		34FB21FF27159E1600EED6FE /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB21FE27159E1600EED6FE /* Paragraph.swift */; };
 		34FB220127159E4900EED6FE /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB220027159E4900EED6FE /* Table.swift */; };
+		34FB22032715A92E00EED6FE /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB22022715A92E00EED6FE /* Element.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		34FB21FC27159DE000EED6FE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		34FB21FE27159E1600EED6FE /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		34FB220027159E4900EED6FE /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		34FB22022715A92E00EED6FE /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				34FB21FC27159DE000EED6FE /* Image.swift */,
 				34FB21FE27159E1600EED6FE /* Paragraph.swift */,
 				34FB220027159E4900EED6FE /* Table.swift */,
+				34FB22022715A92E00EED6FE /* Element.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				34FB21FB27159CAB00EED6FE /* SubChapter.swift in Sources */,
 				34DCA7B12714385A0053FCE1 /* Author.swift in Sources */,
 				34FB21FF27159E1600EED6FE /* Paragraph.swift in Sources */,
+				34FB22032715A92E00EED6FE /* Element.swift in Sources */,
 				34DCA7A12714371A0053FCE1 /* The_Book.xcdatamodeld in Sources */,
 				34DCA79B2714371A0053FCE1 /* ViewController.swift in Sources */,
 				34FB21F927159B8500EED6FE /* TableOfContents.swift in Sources */,
