@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Paragraph{
+public class Paragraph: Element{
     var text: String?
     
     init(paragraphText: String?){

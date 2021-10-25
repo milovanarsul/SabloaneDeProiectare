@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Image{
+public class Image: Element{
     var imageName: String?
     
     init(imageName: String?){
