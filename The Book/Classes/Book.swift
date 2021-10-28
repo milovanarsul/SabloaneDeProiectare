@@ -10,7 +10,7 @@ import Foundation
 public class Book {
     var title: String?
     var authors = [Author]()
-    var chapters = [Chapter]()
+    var contents = [AnyObject]()
     
     init(title: String?){
         self.title = title!
@@ -20,20 +20,20 @@ public class Book {
         self.authors.append(author)
     }
     
-    public func createChapter(chapterName: String?) -> Int{
-        let chapter = Chapter(name: chapterName)
-        self.chapters.append(chapter)
-        return self.chapters.count
-    }
-    
-    public func getChapter(chapterIndex: Int) -> Chapter{
-        return self.chapters[chapterIndex - 1]
+    public func addContent(content: AnyObject){
+        contents.append(content)
     }
     
     public func print(){
-        Swift.print(title!)
-        Swift.print(authors)
-        Swift.print(chapters)
+        Swift.print("Book: " + title! + "\n")
+        
+        Swift.print("Authors:")
+        for author in authors {
+            Swift.print("Author: " + author.name! + " " + author.surname! + "\n")
+        }
+        
+        for content in contents{
+            printType(content: content)
+        }
     }
-    
 }

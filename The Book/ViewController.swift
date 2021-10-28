@@ -10,24 +10,30 @@ import UIKit
 class ViewController: UIViewController {
     
     private func main(){
-        let discoTitanic: Book = Book(title: "Disco Titanic")
-        let rpGheo: Author = Author(authorName: "Radu Pavel Gheo")
+        let noapteBuna: Book = Book(title: "Noapte buna, copii!")
+        let rpGheo: Author = Author(name: "Radu Pavel", surname: "Gheo")
+        noapteBuna.addAuthor(author: rpGheo)
         
-        discoTitanic.addAuthor(author: rpGheo)
-        let indexChapterOne: Int = discoTitanic.createChapter(chapterName: "Capitolul 1")
-        let chp1: Chapter = discoTitanic.getChapter(chapterIndex: indexChapterOne)
-        let indexSubChapterOneOne: Int = chp1.createSubChapter(subChapterName: "Subcapitolul 1.1")
-        let scOneOne: SubChapter = chp1.getSubChapter(subChapterIndex: indexSubChapterOneOne)
+        let cap1: Section = Section(sectionTitle: "Capitolul 1")
+        let cap11: Section = Section(sectionTitle: "Capitolul 1.1")
+        let cap111: Section = Section(sectionTitle: "Capitolul 1.1.1")
+        let cap1111: Section = Section(sectionTitle: "Capitolul 1.1.1.1")
         
-        scOneOne.createNewParagraph(paragraphContents: "Paragraph 1")
-        scOneOne.createNewParagraph(paragraphContents: "Paragraph 2")
-        scOneOne.createNewParagraph(paragraphContents: "Paragraph 3")
-        scOneOne.createNewImage(imageName: "Image 1")
-        scOneOne.createNewParagraph(paragraphContents: "Paragraph 4")
-        scOneOne.createNewTable(tableName: "Table 1")
-        scOneOne.createNewParagraph(paragraphContents: "Paragraph 5")
+        noapteBuna.addContent(content: Paragraph(paragraphText: "Multumesc celor care ..."))
+        noapteBuna.addContent(content: cap1)
         
-        scOneOne.print()
+        cap1.add(element: Paragraph(paragraphText: "Moto capitol") as Element)
+        cap1.add(element: cap11)
+        
+        cap11.add(element: Paragraph(paragraphText: "Text from subchapter 1.1") as! Element)
+        cap11.add(element: cap111)
+        
+        cap111.add(element: Paragraph(paragraphText: "Text from subchapter 1.1.1") as! Element)
+        cap111.add(element: cap1111)
+        
+        cap1111.add(element: Image(url: "Image subchapter 1.1.1.1") as! Element)
+        
+        noapteBuna.print()
     }
 
     override func viewDidLoad() {

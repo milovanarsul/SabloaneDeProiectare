@@ -9,9 +9,11 @@ import Foundation
 
 public class Author {
     var name: String?
+    var surname: String?
     
-    init(authorName: String?){
-        self.name = authorName!
+    init(name: String?, surname: String?){
+        self.name = name!
+        self.surname = surname!
     }
     
     public func print(){

@@ -7,14 +7,26 @@
 
 import Foundation
 
-public class Table{
-    var title: String?
+public class Table: Element{
+    var something: String?
     
-    init(tableTitle: String?){
-        self.title = tableTitle!
+    init(something: String?){
+        self.something = something!
+    }
+    
+    public func add(element: Element) {
+        Swift.print("?")
+    }
+    
+    public func remove(element: Element) {
+        Swift.print("?")
+    }
+    
+    public func get(elementIndex: Int) -> Element{
+        return 0 as! Element
     }
     
     public func print(){
-        Swift.print("Table with title: " + self.title!)
+        Swift.print("Table with title: " + self.something!)
     }
 }
