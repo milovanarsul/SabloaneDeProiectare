@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Paragraph: Element{
+public class Paragraph: Element, Equatable{
     var text: String?
     
     init(paragraphText: String?){
@@ -16,6 +16,10 @@ public class Paragraph: Element{
     
     public func add(element: Element) {
         Swift.print("?")
+    }
+    
+    public static func == (lhs: Paragraph, rhs: Paragraph) -> Bool {
+        return lhs == rhs
     }
     
     public func remove(element: Element) {

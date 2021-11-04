@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class TableOfContents: Element{
+public class TableOfContents: Element, Equatable{
     var something: String?
     
     init(something: String?){
@@ -16,6 +16,10 @@ public class TableOfContents: Element{
     
     public func add(element: Element) {
         Swift.print("?")
+    }
+    
+    public static func == (lhs: TableOfContents, rhs: TableOfContents) -> Bool {
+        return lhs == rhs
     }
     
     public func remove(element: Element) {

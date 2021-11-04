@@ -7,10 +7,11 @@
 
 import Foundation
 
-public class Book {
+public class Book{
+    
     var title: String?
     var authors = [Author]()
-    var contents = [AnyObject]()
+    var contents = [Element]()
     
     init(title: String?){
         self.title = title!
@@ -20,7 +21,7 @@ public class Book {
         self.authors.append(author)
     }
     
-    public func addContent(content: AnyObject){
+    public func addContent(content: Element){
         contents.append(content)
     }
     

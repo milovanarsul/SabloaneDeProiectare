@@ -7,7 +7,8 @@
 
 import Foundation
 
-public class Section: Element{
+public class Section: Element, Equatable{
+
     var title: String?
     public var children = [Element]()
     
@@ -19,9 +20,18 @@ public class Section: Element{
         children.append(element)
     }
     
+    public static func == (lhs: Section, rhs: Section) -> Bool {
+        return lhs == rhs
+    }
+    
     public func remove(element: Element) {
-        let index = self.children.firstIndex(of: element)
-        self.children = children.remove(at: index)
+        var index: Int = 0
+        for child in children {
+            index += 1
+            if element.isEqual(to: child){
+                children.remove(at: index)
+            }
+        }
     }
     
     public func get(elementIndex: Int) -> Element{

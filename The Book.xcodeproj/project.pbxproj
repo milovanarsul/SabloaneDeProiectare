@@ -22,7 +22,7 @@
 		34FB220127159E4900EED6FE /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB220027159E4900EED6FE /* Table.swift */; };
 		34FB22032715A92E00EED6FE /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB22022715A92E00EED6FE /* Element.swift */; };
 		B2CDE9C2272AABF000748F91 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CDE9C1272AABF000748F91 /* Section.swift */; };
-		B2CDE9C4272AEA1300748F91 /* Helper Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CDE9C3272AEA1300748F91 /* Helper Functions.swift */; };
+		B2FE7D922733DB1400CFB21F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE7D912733DB1400CFB21F /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 		34FB220027159E4900EED6FE /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
 		34FB22022715A92E00EED6FE /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		B2CDE9C1272AABF000748F91 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		B2CDE9C3272AEA1300748F91 /* Helper Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Functions.swift"; sourceTree = "<group>"; };
+		B2FE7D912733DB1400CFB21F /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = ../../../../../Desktop/Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,7 @@
 		B2CDE9C0272AAACA00748F91 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				B2CDE9C5272AEA2200748F91 /* Custom */,
+				B2FE7D902733DB0800CFB21F /* Custom */,
 				34DCA7962714371A0053FCE1 /* AppDelegate.swift */,
 				34DCA7982714371A0053FCE1 /* SceneDelegate.swift */,
 				34DCA79C2714371A0053FCE1 /* Main.storyboard */,
@@ -121,10 +121,10 @@
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
-		B2CDE9C5272AEA2200748F91 /* Custom */ = {
+		B2FE7D902733DB0800CFB21F /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				B2CDE9C3272AEA1300748F91 /* Helper Functions.swift */,
+				B2FE7D912733DB1400CFB21F /* Helper.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -207,10 +207,10 @@
 				34DCA79B2714371A0053FCE1 /* ViewController.swift in Sources */,
 				34FB21F927159B8500EED6FE /* TableOfContents.swift in Sources */,
 				34FB220127159E4900EED6FE /* Table.swift in Sources */,
-				B2CDE9C4272AEA1300748F91 /* Helper Functions.swift in Sources */,
 				34DCA7972714371A0053FCE1 /* AppDelegate.swift in Sources */,
 				34DCA7AF2714380B0053FCE1 /* Book.swift in Sources */,
 				B2CDE9C2272AABF000748F91 /* Section.swift in Sources */,
+				B2FE7D922733DB1400CFB21F /* Helper.swift in Sources */,
 				34DCA7992714371A0053FCE1 /* SceneDelegate.swift in Sources */,
 				34FB21FD27159DE000EED6FE /* Image.swift in Sources */,
 			);

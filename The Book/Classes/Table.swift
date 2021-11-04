@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Table: Element{
+public class Table: Element, Equatable{
     var something: String?
     
     init(something: String?){
@@ -16,6 +16,10 @@ public class Table: Element{
     
     public func add(element: Element) {
         Swift.print("?")
+    }
+    
+    public static func == (lhs: Table, rhs: Table) -> Bool {
+        return lhs == rhs
     }
     
     public func remove(element: Element) {
