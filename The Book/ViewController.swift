@@ -10,35 +10,41 @@ import UIKit
 class ViewController: UIViewController {
     
     private func main(){
-        let noapteBuna: Book = Book(title: "Noapte buna, copii!")
-        let rpGheo: Author = Author(name: "Radu Pavel", surname: "Gheo")
-        noapteBuna.addAuthor(author: rpGheo)
+        var startTime = getCurrentTimeInMilliseconds()
         
-        let cap1: Section = Section(sectionTitle: "Capitolul 1")
-        let cap11: Section = Section(sectionTitle: "Capitolul 1.1")
-        let cap111: Section = Section(sectionTitle: "Capitolul 1.1.1")
-        let cap1111: Section = Section(sectionTitle: "Capitolul 1.1.1.1")
+        let img1: ImageProxy = ImageProxy(url: "Pamela Anderson")
+        let img2: ImageProxy = ImageProxy(url: "Kim Kardashian")
+        let img3: ImageProxy = ImageProxy(url: "Kirby Griffin")
         
-        noapteBuna.addContent(content: Paragraph(paragraphText: "Multumesc celor care ..."))
-        noapteBuna.addContent(content: cap1)
+        let playboyS1: Section = Section(sectionTitle: "Front Cover")
+        playboyS1.add(element: img1)
         
-        cap1.add(element: Paragraph(paragraphText: "Moto capitol") as Element)
-        cap1.add(element: cap11)
+        let playboyS2: Section = Section(sectionTitle: "Summer Girls")
+        playboyS2.add(element: img2)
+        playboyS2.add(element: img3)
         
-        cap11.add(element: Paragraph(paragraphText: "Text from subchapter 1.1") as! Element)
-        cap11.add(element: cap111)
+        let playboy: Book = Book(title: "Playboy")
+        playboy.addContent(content: playboyS1)
+        playboy.addContent(content: playboyS2)
         
-        cap111.add(element: Paragraph(paragraphText: "Text from subchapter 1.1.1") as! Element)
-        cap111.add(element: cap1111)
+        var endTime = getCurrentTimeInMilliseconds()
+        Swift.print("Creation of the content took \(endTime - startTime) milliseconds")
         
-        cap1111.add(element: Image(url: "Image subchapter 1.1.1.1") as! Element)
+        startTime = getCurrentTimeInMilliseconds()
+        playboyS1.print()
+        endTime = getCurrentTimeInMilliseconds()
         
-        noapteBuna.print()
+        Swift.print("Printing the section 1 took \(endTime - startTime) milliseconds")
+        
+        startTime = getCurrentTimeInMilliseconds()
+        playboyS1.print()
+        endTime = getCurrentTimeInMilliseconds()
+        
+        Swift.print("Printing again the section 1 took \(endTime - startTime) milliseconds")
     }
 
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
-        
         main()
     }
 

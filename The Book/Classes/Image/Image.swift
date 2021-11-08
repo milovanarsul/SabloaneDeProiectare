@@ -9,10 +9,15 @@ import Foundation
 
 public class Image: Element, Equatable {
     var url: String?
+    var content: ImageContent = ImageContent()
     
     init(url: String?){
         self.url = url!
+        let seconds: UInt32 = 5
+        usleep(seconds * 1000000)
     }
+    
+    init?(){return nil}
     
     public func add(element: Element) {
         Swift.print("?")
