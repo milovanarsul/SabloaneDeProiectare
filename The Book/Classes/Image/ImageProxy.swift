@@ -26,7 +26,9 @@ public class ImageProxy: Element{
         return self.realImg!
     }
     
-    public func print() {}
+    public func print(){
+        Swift.print(loadImage())
+    }
     
     public func add(element: Element) {}
     
