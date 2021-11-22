@@ -10,37 +10,29 @@ import UIKit
 class ViewController: UIViewController {
     
     private func main(){
-        var startTime = getCurrentTimeInMilliseconds()
+        let cap1 = Section(sectionTitle: "Capitolul 1")
         
-        let img1: ImageProxy = ImageProxy(url: "Pamela Anderson")
-        let img2: ImageProxy = ImageProxy(url: "Kim Kardashian")
-        let img3: ImageProxy = ImageProxy(url: "Kirby Griffin")
+        let p1 = Paragraph(paragraphText: "Paragraph 1")
+        cap1.add(element: p1)
         
-        let playboyS1: Section = Section(sectionTitle: "Front Cover")
-        playboyS1.add(element: img1)
+        let p2 = Paragraph(paragraphText: "Paragraph 2")
+        cap1.add(element: p2)
         
-        let playboyS2: Section = Section(sectionTitle: "Summer Girls")
-        playboyS2.add(element: img2)
-        playboyS2.add(element: img3)
+        let p3 = Paragraph(paragraphText: "Paragraph 3")
+        cap1.add(element: p3)
         
-        let playboy: Book = Book(title: "Playboy")
-        playboy.addContent(content: playboyS1)
-        playboy.addContent(content: playboyS2)
+        let p4 = Paragraph(paragraphText: "Paragraph 4")
+        cap1.add(element: p4)
         
-        var endTime = getCurrentTimeInMilliseconds()
-        Swift.print("Creation of the content took \(endTime - startTime) milliseconds")
+        Swift.print("Printing without Alignment \n")
+        cap1.print()
         
-        startTime = getCurrentTimeInMilliseconds()
-        playboyS1.print()
-        endTime = getCurrentTimeInMilliseconds()
+        p1.setAlignStrategy(strategy: AlignCenter()!)
+        p2.setAlignStrategy(strategy: AlignRight()!)
+        p3.setAlignStrategy(strategy: AlignLeft()!)
         
-        Swift.print("Printing the section 1 took \(endTime - startTime) milliseconds")
-        
-        startTime = getCurrentTimeInMilliseconds()
-        playboyS1.print()
-        endTime = getCurrentTimeInMilliseconds()
-        
-        Swift.print("Printing again the section 1 took \(endTime - startTime) milliseconds")
+        Swift.print("\n Printing with Alignment \n")
+        cap1.print()
     }
 
     override func viewDidLoad(){

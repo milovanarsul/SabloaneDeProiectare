@@ -21,6 +21,11 @@
 		34FB21FF27159E1600EED6FE /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB21FE27159E1600EED6FE /* Paragraph.swift */; };
 		34FB220127159E4900EED6FE /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB220027159E4900EED6FE /* Table.swift */; };
 		34FB22032715A92E00EED6FE /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB22022715A92E00EED6FE /* Element.swift */; };
+		B23C8DDA274BA8A900EE8EAE /* AlignStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8DD9274BA8A900EE8EAE /* AlignStrategy.swift */; };
+		B23C8DDE274BA92B00EE8EAE /* AlignLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8DDD274BA92B00EE8EAE /* AlignLeft.swift */; };
+		B23C8DE0274BA98C00EE8EAE /* AlignCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8DDF274BA98C00EE8EAE /* AlignCenter.swift */; };
+		B23C8DE2274BAA1300EE8EAE /* AlignRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8DE1274BAA1300EE8EAE /* AlignRight.swift */; };
+		B23C8DE4274BACB300EE8EAE /* DocumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8DE3274BACB300EE8EAE /* DocumentManager.swift */; };
 		B29DB0452739249C0078E19F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29DB0442739249C0078E19F /* Helper.swift */; };
 		B29DB04727392BE30078E19F /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29DB04627392BE20078E19F /* Picture.swift */; };
 		B29DB04927392D660078E19F /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29DB04827392D660078E19F /* Dimension.swift */; };
@@ -46,6 +51,11 @@
 		34FB21FE27159E1600EED6FE /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		34FB220027159E4900EED6FE /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
 		34FB22022715A92E00EED6FE /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		B23C8DD9274BA8A900EE8EAE /* AlignStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignStrategy.swift; sourceTree = "<group>"; };
+		B23C8DDD274BA92B00EE8EAE /* AlignLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignLeft.swift; sourceTree = "<group>"; };
+		B23C8DDF274BA98C00EE8EAE /* AlignCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignCenter.swift; sourceTree = "<group>"; };
+		B23C8DE1274BAA1300EE8EAE /* AlignRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignRight.swift; sourceTree = "<group>"; };
+		B23C8DE3274BACB300EE8EAE /* DocumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentManager.swift; sourceTree = "<group>"; };
 		B29DB0442739249C0078E19F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B29DB04627392BE20078E19F /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		B29DB04827392D660078E19F /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
@@ -87,6 +97,8 @@
 				B2CDE9C0272AAACA00748F91 /* Dependencies */,
 				34DCA7AD271437E50053FCE1 /* Classes */,
 				B2CDE9BF272AAA9E00748F91 /* Protocols (Interfaces) */,
+				B23C8DDB274BA8D400EE8EAE /* Alignments */,
+				B23C8DE3274BACB300EE8EAE /* DocumentManager.swift */,
 				34DCA79A2714371A0053FCE1 /* ViewController.swift */,
 				34DCA7A72714371C0053FCE1 /* Info.plist */,
 			);
@@ -107,6 +119,16 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		B23C8DDB274BA8D400EE8EAE /* Alignments */ = {
+			isa = PBXGroup;
+			children = (
+				B23C8DDD274BA92B00EE8EAE /* AlignLeft.swift */,
+				B23C8DDF274BA98C00EE8EAE /* AlignCenter.swift */,
+				B23C8DE1274BAA1300EE8EAE /* AlignRight.swift */,
+			);
+			path = Alignments;
+			sourceTree = "<group>";
+		};
 		B29DB04C27392E5E0078E19F /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +145,7 @@
 			children = (
 				34FB22022715A92E00EED6FE /* Element.swift */,
 				B29DB04627392BE20078E19F /* Picture.swift */,
+				B23C8DD9274BA8A900EE8EAE /* AlignStrategy.swift */,
 			);
 			path = "Protocols (Interfaces)";
 			sourceTree = "<group>";
@@ -222,14 +245,19 @@
 			files = (
 				34DCA7B12714385A0053FCE1 /* Author.swift in Sources */,
 				B29DB0452739249C0078E19F /* Helper.swift in Sources */,
+				B23C8DDE274BA92B00EE8EAE /* AlignLeft.swift in Sources */,
 				34FB21FF27159E1600EED6FE /* Paragraph.swift in Sources */,
+				B23C8DE4274BACB300EE8EAE /* DocumentManager.swift in Sources */,
+				B23C8DE0274BA98C00EE8EAE /* AlignCenter.swift in Sources */,
 				34FB22032715A92E00EED6FE /* Element.swift in Sources */,
 				B29DB04E27392E850078E19F /* ImageProxy.swift in Sources */,
 				B29DB04727392BE30078E19F /* Picture.swift in Sources */,
+				B23C8DE2274BAA1300EE8EAE /* AlignRight.swift in Sources */,
 				34DCA7A12714371A0053FCE1 /* The_Book.xcdatamodeld in Sources */,
 				B29DB04B27392D860078E19F /* ImageContent.swift in Sources */,
 				34DCA79B2714371A0053FCE1 /* ViewController.swift in Sources */,
 				34FB21F927159B8500EED6FE /* TableOfContents.swift in Sources */,
+				B23C8DDA274BA8A900EE8EAE /* AlignStrategy.swift in Sources */,
 				B29DB04927392D660078E19F /* Dimension.swift in Sources */,
 				34FB220127159E4900EED6FE /* Table.swift in Sources */,
 				34DCA7972714371A0053FCE1 /* AppDelegate.swift in Sources */,

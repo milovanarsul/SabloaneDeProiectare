@@ -9,10 +9,12 @@ import Foundation
 
 public class Paragraph: Element, Equatable{
     var text: String?
+    var textAlignment: AlignStrategy?
     
     init(paragraphText: String?){
         self.text = paragraphText
     }
+    
     
     public func add(element: Element) {
         Swift.print("?")
@@ -30,7 +32,11 @@ public class Paragraph: Element, Equatable{
         return 0 as! Element
     }
     
+    public func setAlignStrategy(strategy: AlignStrategy){
+        self.textAlignment = strategy
+    }
+    
     public func print(){
-        Swift.print("Paragraph: " + self.text!)
+        self.textAlignment?.render(paragraph: self.text!)
     }
 }
