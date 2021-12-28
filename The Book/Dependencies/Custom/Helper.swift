@@ -11,11 +11,11 @@ import Foundation
 
 public func printType(content: Element){
     switch content{
-    case is Section: content.print()
-    case is TableOfContents: content.print()
-    case is Paragraph: content.print()
-    case is Image: content.print()
-    default: content.print()
+    case is Section: content.render()
+    case is TableOfContents: content.render()
+    case is Paragraph: content.render()
+    case is Image: content.render()
+    default: content.render()
     }
 }
 

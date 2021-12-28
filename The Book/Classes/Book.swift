@@ -7,8 +7,7 @@
 
 import Foundation
 
-public class Book{
-    
+public class Book: Visitee{
     var title: String?
     var authors = [Author]()
     var contents = [Element]()
@@ -25,7 +24,7 @@ public class Book{
         contents.append(content)
     }
     
-    public func print(){
+    public func render(){
         Swift.print("Book: " + title! + "\n")
         
         Swift.print("Authors:")
@@ -37,4 +36,10 @@ public class Book{
             printType(content: content)
         }
     }
+    
+    public func accept(visitor: Visitor) {
+        visitor.visit(book: self)
+    }
+    
+    
 }

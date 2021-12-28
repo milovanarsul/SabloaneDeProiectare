@@ -8,11 +8,11 @@
 import Foundation
 
 public protocol Element{
-    func print()
     func add(element: Element)
     func remove(element: Element)
     func get(elementIndex: Int) -> Element
     func isEqual(to: Element) -> Bool
+    func render()
 }
 
 extension Element where Self : Equatable {

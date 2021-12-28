@@ -7,8 +7,7 @@
 
 import Foundation
 
-public class ImageProxy: Element{
-    
+public class ImageProxy: Element, Visitee{
     var url: String?
     var dim: Dimension?
     var realImg: Image?
@@ -26,7 +25,7 @@ public class ImageProxy: Element{
         return self.realImg!
     }
     
-    public func print(){
+    public func render(){
         Swift.print(loadImage())
     }
     
@@ -37,4 +36,8 @@ public class ImageProxy: Element{
     public func get(elementIndex: Int) -> Element {return 0 as! Element}
     
     public func isEqual(to: Element) -> Bool {return false}
+    
+    public func accept(visitor: Visitor) {
+        visitor.visit(imageProxy: self)
+    }
 }

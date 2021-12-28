@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Section: Element, Equatable{
+public class Section: Element, Equatable, Visitee{
 
     var title: String?
     public var children = [Element]()
@@ -38,10 +38,14 @@ public class Section: Element, Equatable{
         return children[elementIndex]
     }
     
-    public func print() {
+    public func render() {
         Swift.print(self.title!)
         for child in children{
             printType(content: child)
         }
+    }
+    
+    public func accept(visitor: Visitor) {
+        visitor.visit(section: self)
     }
 }

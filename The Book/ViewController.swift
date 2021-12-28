@@ -9,50 +9,38 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    public func Printing(){
-        DocumentManager.getInstance().getBook().print()
-    }
-    
     private func main(){
-        let myBook = Book(title: "My Book")
-        DocumentManager.getInstance().setBook(book: myBook)
-        
-        let me = Author(name: "Myself", surname: "")
-        myBook.addAuthor(author: me)
-        
-        let cap1 = Section(sectionTitle: "Capitolul 1")
-        myBook.addContent(content: cap1)
-        
-        let p1 = Paragraph(paragraphText: "Paragraph 1")
+        let cap1: Section = Section(sectionTitle: "Capitolul 1")
+        let p1: Paragraph = Paragraph(paragraphText: "Paragraph 1")
         cap1.add(element: p1)
         
-        let p2 = Paragraph(paragraphText: "Paragraph 2")
+        let p2: Paragraph = Paragraph(paragraphText: "Paragraph 2")
         cap1.add(element: p2)
         
-        let p3 = Paragraph(paragraphText: "Paragraph 1")
+        let p3: Paragraph = Paragraph(paragraphText: "Paragraph 3")
         cap1.add(element: p3)
         
-        let p4 = Paragraph(paragraphText: "Paragraph 4")
+        let p4: Paragraph = Paragraph(paragraphText: "Paragraph 4")
         cap1.add(element: p4)
         
-        Swift.print("Printing without Alignment \n")
-        cap1.print()
+        cap1.add(element: ImageProxy(url: "ImageOne"))
+        cap1.add(element: Image(url: "ImageTwo"))
+        cap1.add(element: Paragraph(paragraphText: "Some text"))
+        cap1.add(element: Table(something: "Table1"))
         
-        p1.setAlignStrategy(strategy: AlignCenter()!)
-        p2.setAlignStrategy(strategy: AlignRight()!)
-        p3.setAlignStrategy(strategy: AlignLeft()!)
+        let stats: BookStatistics = BookStatistics()
+        cap1.accept(visitor: stats)
+        stats.printStatistics()
         
-        Swift.print("\nPrinting with Alignment \n")
-        cap1.print()
+        let generatedTableOfContents = GenerateToC()
+        cap1.accept(visitor: generatedTableOfContents)
+        generatedTableOfContents.getToC().render()
         
-        Printing()
     }
 
     override func viewDidLoad(){
         super.viewDidLoad()
         main()
     }
-
-
 }
 
