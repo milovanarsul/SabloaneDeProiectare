@@ -23,9 +23,7 @@ public class Paragraph: Element, Equatable, Visitee{
     
     public func remove(element: Element) {}
     
-    public func get(elementIndex: Int) -> Element{
-        return 0 as! Element
-    }
+    public func get(elementIndex: Int) -> Element? {return nil}
     
     public func setAlignStrategy(strategy: AlignStrategy){
         self.textAlignment = strategy

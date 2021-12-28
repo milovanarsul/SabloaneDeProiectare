@@ -8,10 +8,10 @@
 import Foundation
 
 public class Table: Element, Equatable, Visitee{
-    var something: String?
+    var title: String?
     
-    init(something: String?){
-        self.something = something!
+    init(title: String?){
+        self.title = title!
     }
     
     public func add(element: Element) {}
@@ -22,12 +22,10 @@ public class Table: Element, Equatable, Visitee{
     
     public func remove(element: Element) {}
     
-    public func get(elementIndex: Int) -> Element{
-        return 0 as! Element
-    }
+    public func get(elementIndex: Int) -> Element? {return nil}
     
     public func render(){
-        Swift.print("Table with title: " + self.something!)
+        Swift.print("Table with title: " + self.title!)
     }
     
     public func accept(visitor: Visitor) {

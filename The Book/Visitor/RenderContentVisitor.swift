@@ -8,6 +8,7 @@
 import Foundation
 
 public class RenderContentVisitor: Visitor{
+    
     public func visit(book: Book) {
         book.render()
     }
@@ -32,5 +33,8 @@ public class RenderContentVisitor: Visitor{
         table.render()
     }
     
-    
+    public func visit(image: Image) {
+        image.render()
+    }
+
 }

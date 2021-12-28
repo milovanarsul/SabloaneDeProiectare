@@ -8,6 +8,7 @@
 import Foundation
 
 public class BookStatistics: Visitor{
+    
     var imagesCounter: Int = 0
     var tablesCounter: Int = 0
     var paragraphsCounter: Int = 0;
@@ -29,7 +30,11 @@ public class BookStatistics: Visitor{
     }
     
     public func visit(table: Table) {
-        self.paragraphsCounter += 1
+        self.tablesCounter += 1
+    }
+    
+    public func visit(image: Image) {
+        self.imagesCounter += 1
     }
     
     public func printStatistics(){

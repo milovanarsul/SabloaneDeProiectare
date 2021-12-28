@@ -13,5 +13,6 @@ public protocol Visitor{
     func visit(tableOfContents: TableOfContents)
     func visit(paragraph: Paragraph)
     func visit(imageProxy: ImageProxy)
+    func visit(image: Image)
     func visit(table: Table)
 }

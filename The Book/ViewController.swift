@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         cap1.add(element: ImageProxy(url: "ImageOne"))
         cap1.add(element: Image(url: "ImageTwo"))
         cap1.add(element: Paragraph(paragraphText: "Some text"))
-        cap1.add(element: Table(something: "Table1"))
+        cap1.add(element: Table(title: "Table1"))
         
         let stats: BookStatistics = BookStatistics()
         cap1.accept(visitor: stats)
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
         let generatedTableOfContents = GenerateToC()
         cap1.accept(visitor: generatedTableOfContents)
-        generatedTableOfContents.getToC().render()
+        generatedTableOfContents.getToC()?.render()
         
     }
 

@@ -7,10 +7,10 @@
 
 import Foundation
 
-public protocol Element{
+public protocol Element: Visitee{
     func add(element: Element)
     func remove(element: Element)
-    func get(elementIndex: Int) -> Element
+    func get(elementIndex: Int) -> Element?
     func isEqual(to: Element) -> Bool
     func render()
 }

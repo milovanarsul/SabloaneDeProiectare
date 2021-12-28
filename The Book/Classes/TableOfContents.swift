@@ -8,9 +8,15 @@
 import Foundation
 
 public class TableOfContents: Element, Equatable, Visitee{
+    
+    var title: String?
     var sections = [Section]()
     
-    init(){}
+    init(title: String?){
+        self.title = title
+    }
+    
+    init() {}
     
     public func add(element: Element) {}
     
@@ -20,9 +26,7 @@ public class TableOfContents: Element, Equatable, Visitee{
     
     public func remove(element: Element) {}
     
-    public func get(elementIndex: Int) -> Element{
-        return 0 as! Element
-    }
+    public func get(elementIndex: Int) -> Element? {return nil}
 
     public func render(){
         Swift.print("Table of contents: \n")
@@ -33,6 +37,6 @@ public class TableOfContents: Element, Equatable, Visitee{
     
     public func accept(visitor: Visitor) {
         visitor.visit(tableOfContents: self)
-        sections.append(contentsOf: visitor)
+        //self.sections.append(contentsOf: visitor)
     }
 }

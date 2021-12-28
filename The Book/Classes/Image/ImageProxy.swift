@@ -33,7 +33,7 @@ public class ImageProxy: Element, Visitee{
     
     public func remove(element: Element) {}
     
-    public func get(elementIndex: Int) -> Element {return 0 as! Element}
+    public func get(elementIndex: Int) -> Element? {return nil}
     
     public func isEqual(to: Element) -> Bool {return false}
     

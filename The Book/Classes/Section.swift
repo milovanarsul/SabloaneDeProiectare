@@ -34,7 +34,7 @@ public class Section: Element, Equatable, Visitee{
         }
     }
     
-    public func get(elementIndex: Int) -> Element{
+    public func get(elementIndex: Int) -> Element?{
         return children[elementIndex]
     }
     
@@ -47,5 +47,8 @@ public class Section: Element, Equatable, Visitee{
     
     public func accept(visitor: Visitor) {
         visitor.visit(section: self)
+        for child in children {
+            child.accept(visitor: visitor)
+        }
     }
 }

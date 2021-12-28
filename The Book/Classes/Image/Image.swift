@@ -7,7 +7,8 @@
 
 import Foundation
 
-public class Image: Element, Equatable{
+public class Image: Element, Equatable, Visitee{
+    
     var url: String?
     var content: ImageContent = ImageContent()
     
@@ -29,11 +30,13 @@ public class Image: Element, Equatable{
     
     public func remove(element: Element) {}
     
-    public func get(elementIndex: Int) -> Element{
-       return 0 as! Element
-    }
+    public func get(elementIndex: Int) -> Element? {return nil}
     
     public func render(){
         Swift.print("Image with name: " + self.url!)
+    }
+    
+    public func accept(visitor: Visitor) {
+        visitor.visit(image: self)
     }
 }

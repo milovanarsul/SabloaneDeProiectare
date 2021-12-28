@@ -21,7 +21,7 @@ public class Book: Visitee{
     }
     
     public func addContent(content: Element){
-        contents.append(content)
+        self.contents.append(content)
     }
     
     public func render(){
@@ -39,6 +39,9 @@ public class Book: Visitee{
     
     public func accept(visitor: Visitor) {
         visitor.visit(book: self)
+        for content in contents {
+            content.accept(visitor: visitor)
+        }
     }
     
     
