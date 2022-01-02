@@ -18,3 +18,10 @@ implement ImageProxy::print() to load the image and print it
 https://github.com/milovanarsul/SabloaneDeProiectare/tree/ede0063e7ff02ebb1be9266e399e3ecf6ed84abd
 
 all good
+
+# Feedback lab6:
+https://github.com/milovanarsul/SabloaneDeProiectare/tree/e14f57646eac18a79005bd027eed528e67ec36fb
+
+Table of content should contain only a list of strings thats represents section's titles. As extra, good number managment that can reprezents the page number (considering each paragraph/table/image are printed on a page).
+
+# Proposed grade: 10
